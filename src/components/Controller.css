@@ -1,0 +1,51 @@
+.controller {
+  position: absolute;
+  bottom: 0;
+  margin: 10px 0;
+  width: 100%;
+  text-align: center;
+}
+
+.controller .setting-card {
+  color: #fff;
+  position: relative;
+  margin: 0 auto -5px;
+  width: 580px;
+  text-align: left;
+  background-color: #060606;
+  opacity: 0;
+  transform: translateY(25px);
+  transition: all .1s ease-out;
+  z-index: 1;
+}
+
+.controller .setting-card.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.controller div[role="group"] {
+  position: relative;
+  background-color: #000;
+  z-index: 2;
+}
+
+.controller div[role="group"] button {
+  padding: 15px 0;
+  width: 140px;
+  border-right: solid 1px #333 !important;
+  text-shadow: 0 1px 2px #333;
+}
+
+.controller div[role="group"] button[aria-label="setting"] {
+  width: inherit;
+  border-right: 0 !important;
+}
+
+.controller div[role="group"] button:disabled {
+  color: #000;
+}
+
+.controller div[role="group"] button svg {
+  filter: drop-shadow(0 1px 2px #333);
+}
